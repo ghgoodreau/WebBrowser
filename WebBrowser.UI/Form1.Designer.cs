@@ -51,8 +51,10 @@
             this.bookmarkButton = new System.Windows.Forms.ToolStripButton();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.browser1 = new System.Windows.Forms.WebBrowser();
             this.menuStrip2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -225,6 +227,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.browser1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -242,6 +245,15 @@
             this.tabControl1.Size = new System.Drawing.Size(800, 401);
             this.tabControl1.TabIndex = 3;
             // 
+            // browser1
+            // 
+            this.browser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.browser1.Location = new System.Drawing.Point(3, 3);
+            this.browser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.browser1.Name = "browser1";
+            this.browser1.Size = new System.Drawing.Size(786, 369);
+            this.browser1.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -256,6 +268,7 @@
             this.menuStrip2.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -285,6 +298,7 @@
         private System.Windows.Forms.ToolStripButton bookmarkButton;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.WebBrowser browser1;
     }
 }
 
