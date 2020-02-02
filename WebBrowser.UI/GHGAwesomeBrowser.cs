@@ -48,5 +48,10 @@ namespace WebBrowser.UI
                 browser1.Navigate(addressTextBox.Text);
             }
         }
+
+        private void GHGAwesomeBrowser_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
