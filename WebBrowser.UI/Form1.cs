@@ -20,9 +20,8 @@ namespace WebBrowser.UI
         // will display pop up about me
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form dialogBox = new Form();
-            dialogBox.ShowDialog();
-            // need to add text to this!
+            MessageBox.Show("Hey! My name is Gregory Goodreau (ghg0004). I am online Auburn Student. " +
+                "This is my web browser that I am incrimentally designing over the course of a semester.");
         }
 
         // exits the web browser
