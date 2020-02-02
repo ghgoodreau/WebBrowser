@@ -17,9 +17,16 @@ namespace WebBrowser.UI
             InitializeComponent();
         }
 
+        // will display pop up about me
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        // exits the web browser
+        private void exitWebBrowserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
