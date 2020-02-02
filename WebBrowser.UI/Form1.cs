@@ -20,7 +20,9 @@ namespace WebBrowser.UI
         // will display pop up about me
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Form dialogBox = new Form();
+            dialogBox.ShowDialog();
+            // need to add text to this!
         }
 
         // exits the web browser
