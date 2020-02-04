@@ -160,10 +160,10 @@
             this.addressTextBox,
             this.goButton,
             this.bookmarkButton});
-            this.toolStrip1.Location = new System.Drawing.Point(89, 24);
+            this.toolStrip1.Location = new System.Drawing.Point(112, 36);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(552, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(583, 25);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
