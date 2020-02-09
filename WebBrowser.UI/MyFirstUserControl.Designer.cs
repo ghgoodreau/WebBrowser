@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.addressTextBox = new System.Windows.Forms.ToolStripTextBox();
-            this.browser1 = new System.Windows.Forms.WebBrowser();
             this.backButton = new System.Windows.Forms.ToolStripButton();
             this.forwardButton = new System.Windows.Forms.ToolStripButton();
             this.refreshButton = new System.Windows.Forms.ToolStripButton();
             this.homeButton = new System.Windows.Forms.ToolStripButton();
+            this.addressTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.goButton = new System.Windows.Forms.ToolStripButton();
             this.bookmarkButton = new System.Windows.Forms.ToolStripButton();
+            this.browser1 = new System.Windows.Forms.WebBrowser();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,26 +55,9 @@
             this.toolStrip1.Location = new System.Drawing.Point(86, 3);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(583, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(552, 25);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // addressTextBox
-            // 
-            this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(400, 25);
-            this.addressTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.addressTextBox_KeyDown);
-            // 
-            // browser1
-            // 
-            this.browser1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.browser1.Location = new System.Drawing.Point(3, 31);
-            this.browser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.browser1.Name = "browser1";
-            this.browser1.Size = new System.Drawing.Size(757, 492);
-            this.browser1.TabIndex = 4;
             // 
             // backButton
             // 
@@ -115,6 +98,12 @@
             this.homeButton.Size = new System.Drawing.Size(23, 22);
             this.homeButton.Text = "toolStripButton4";
             // 
+            // addressTextBox
+            // 
+            this.addressTextBox.Name = "addressTextBox";
+            this.addressTextBox.Size = new System.Drawing.Size(400, 25);
+            this.addressTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.addressTextBox_KeyDown);
+            // 
             // goButton
             // 
             this.goButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -133,6 +122,18 @@
             this.bookmarkButton.Name = "bookmarkButton";
             this.bookmarkButton.Size = new System.Drawing.Size(23, 22);
             this.bookmarkButton.Text = "toolStripButton1";
+            // 
+            // browser1
+            // 
+            this.browser1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.browser1.Location = new System.Drawing.Point(3, 31);
+            this.browser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.browser1.Name = "browser1";
+            this.browser1.Size = new System.Drawing.Size(757, 492);
+            this.browser1.TabIndex = 4;
+            this.browser1.Navigated += new System.Windows.Forms.WebBrowserNavigatedEventHandler(this.browser1_Navigated_1);
             // 
             // MyFirstUserControl
             // 

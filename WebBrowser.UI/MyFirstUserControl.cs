@@ -53,5 +53,11 @@ namespace WebBrowser.UI
             // refreshes current page
             browser1.Refresh();
         }
+
+        // updates address text box to display current url
+        private void browser1_Navigated_1(object sender, WebBrowserNavigatedEventArgs e)
+        {
+            addressTextBox.Text = browser1.Url.ToString();
+        }
     }
 }
