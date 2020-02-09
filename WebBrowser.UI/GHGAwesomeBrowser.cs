@@ -34,25 +34,19 @@ namespace WebBrowser.UI
             this.Close();
         }
 
-        /*
-        private void goButton_Click(object sender, EventArgs e)
-        {
-            // when the go button is pressed, it navigates to the url in browser.
-            browser1.Navigate(addressTextBox.Text);
-        }
-
-        private void addressTextBox_KeyDown(object sender, KeyEventArgs e)
-        {
-            // when enter is pressed on the address box, it navigates to the url in browser.
-            if (e.KeyCode == Keys.Enter)
-            {
-                browser1.Navigate(addressTextBox.Text);
-            }
-        }
-        */
+        // loads browser
         private void GHGAwesomeBrowser_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void newTabToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TabPage newTabPage = new TabPage("New Tab");
+            tabControl1.TabPages.Add(newTabPage);
+            MyFirstUserControl newTabControl = new MyFirstUserControl();
+            newTabControl.Dock = DockStyle.Fill;
+            newTabPage.Controls.Add(newTabControl);
         }
     }
 }
