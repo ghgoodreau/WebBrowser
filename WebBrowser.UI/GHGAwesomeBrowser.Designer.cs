@@ -41,8 +41,8 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.myFirstUserControl1 = new WebBrowser.UI.MyFirstUserControl();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.myFirstUserControl1 = new WebBrowser.UI.MyFirstUserControl();
             this.menuStrip2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -84,6 +84,7 @@
             this.closeCurrentTabToolStripMenuItem.Name = "closeCurrentTabToolStripMenuItem";
             this.closeCurrentTabToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.closeCurrentTabToolStripMenuItem.Text = "Close Current Tab";
+            this.closeCurrentTabToolStripMenuItem.Click += new System.EventHandler(this.closeCurrentTabToolStripMenuItem_Click);
             // 
             // savePageAsHTMLToolStripMenuItem
             // 
@@ -151,16 +152,6 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // myFirstUserControl1
-            // 
-            this.myFirstUserControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.myFirstUserControl1.Location = new System.Drawing.Point(-4, 0);
-            this.myFirstUserControl1.Name = "myFirstUserControl1";
-            this.myFirstUserControl1.Size = new System.Drawing.Size(800, 409);
-            this.myFirstUserControl1.TabIndex = 0;
-            // 
             // tabControl1
             // 
             this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -172,6 +163,16 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(800, 426);
             this.tabControl1.TabIndex = 3;
+            // 
+            // myFirstUserControl1
+            // 
+            this.myFirstUserControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.myFirstUserControl1.Location = new System.Drawing.Point(-4, 0);
+            this.myFirstUserControl1.Name = "myFirstUserControl1";
+            this.myFirstUserControl1.Size = new System.Drawing.Size(800, 409);
+            this.myFirstUserControl1.TabIndex = 0;
             // 
             // GHGAwesomeBrowser
             // 

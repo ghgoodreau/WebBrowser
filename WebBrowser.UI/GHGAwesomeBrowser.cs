@@ -40,6 +40,7 @@ namespace WebBrowser.UI
 
         }
 
+        // creates a new tab
         private void newTabToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TabPage newTabPage = new TabPage("New Tab");
@@ -47,6 +48,12 @@ namespace WebBrowser.UI
             MyFirstUserControl newTabControl = new MyFirstUserControl();
             newTabControl.Dock = DockStyle.Fill;
             newTabPage.Controls.Add(newTabControl);
+        }
+
+        // closes current tab
+        private void closeCurrentTabToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            tabControl1.TabPages.Remove(tabControl1.SelectedTab);
         }
     }
 }
