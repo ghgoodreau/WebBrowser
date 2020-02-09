@@ -12,14 +12,14 @@ namespace WebBrowser.UI
 {
     public partial class MyFirstUserControl : UserControl
     {
+        // forward and back stacks
+        public Stack<string> forwardLinks = new Stack<string>();
+        public Stack<string> backwardLinks = new Stack<string>();
+
         public MyFirstUserControl()
         {
             InitializeComponent();
         }
-
-        // forward and back stacks
-        Stack<string> forwardLinks = new Stack<string>();
-        Stack<string> backwardLinks = new Stack<string>();
 
         private void goButton_Click(object sender, EventArgs e)
         {
@@ -39,12 +39,14 @@ namespace WebBrowser.UI
         private void backButton_Click(object sender, EventArgs e)
         {
             // navigates back a page
+            forwardLinks.Push(browser1.Url.ToString());
             browser1.GoBack();
         }
 
         private void forwardButton_Click(object sender, EventArgs e)
         {
             // navigates forward a page
+            backwardLinks.Push(browser1.Url.ToString());
             browser1.GoForward();
         }
 
