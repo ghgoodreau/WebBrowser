@@ -74,6 +74,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -93,6 +94,27 @@
       <Project>{b274a907-148d-474e-9f0c-f8a00aaac153}</Project>
       <Name>WebBrowser.Logic</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_refresh_13517.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_refresh_135171.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_go_13508.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_back_13484.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_home_13511.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_folder_13504.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_web_13526.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
