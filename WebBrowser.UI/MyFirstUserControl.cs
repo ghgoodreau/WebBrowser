@@ -37,5 +37,11 @@ namespace WebBrowser.UI
             // navigates back a page
             browser1.GoBack();
         }
+
+        private void forwardButton_Click(object sender, EventArgs e)
+        {
+            // navigates forward a page
+            browser1.GoForward();
+        }
     }
 }
