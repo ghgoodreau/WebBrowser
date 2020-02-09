@@ -31,5 +31,11 @@ namespace WebBrowser.UI
                 browser1.Navigate(addressTextBox.Text);
             }
         }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            // navigates back a page
+            browser1.GoBack();
+        }
     }
 }
