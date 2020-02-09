@@ -17,6 +17,10 @@ namespace WebBrowser.UI
             InitializeComponent();
         }
 
+        // forward and back stacks
+        Stack<string> forwardLinks = new Stack<string>();
+        Stack<string> backwardLinks = new Stack<string>();
+
         private void goButton_Click(object sender, EventArgs e)
         {
             // when the go button is pressed, it navigates to the url in browser.
