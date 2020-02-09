@@ -43,5 +43,11 @@ namespace WebBrowser.UI
             // navigates forward a page
             browser1.GoForward();
         }
+
+        private void refreshButton_Click(object sender, EventArgs e)
+        {
+            // refreshes current page
+            browser1.Refresh();
+        }
     }
 }
