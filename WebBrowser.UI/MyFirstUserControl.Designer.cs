@@ -43,6 +43,7 @@
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.backButton,
@@ -52,10 +53,10 @@
             this.addressTextBox,
             this.goButton,
             this.bookmarkButton});
-            this.toolStrip1.Location = new System.Drawing.Point(75, 0);
+            this.toolStrip1.Location = new System.Drawing.Point(86, 3);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(552, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(583, 25);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -99,6 +100,7 @@
             // 
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(400, 25);
+            this.addressTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.addressTextBox_KeyDown);
             // 
             // goButton
             // 
@@ -108,6 +110,7 @@
             this.goButton.Name = "goButton";
             this.goButton.Size = new System.Drawing.Size(23, 22);
             this.goButton.Text = "toolStripButton5";
+            this.goButton.Click += new System.EventHandler(this.goButton_Click);
             // 
             // bookmarkButton
             // 
@@ -123,7 +126,7 @@
             this.browser1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.browser1.Location = new System.Drawing.Point(3, 28);
+            this.browser1.Location = new System.Drawing.Point(3, 31);
             this.browser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.browser1.Name = "browser1";
             this.browser1.Size = new System.Drawing.Size(757, 492);

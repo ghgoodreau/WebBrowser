@@ -34,6 +34,7 @@ namespace WebBrowser.UI
             this.Close();
         }
 
+        /*
         private void goButton_Click(object sender, EventArgs e)
         {
             // when the go button is pressed, it navigates to the url in browser.
@@ -48,7 +49,7 @@ namespace WebBrowser.UI
                 browser1.Navigate(addressTextBox.Text);
             }
         }
-
+        */
         private void GHGAwesomeBrowser_Load(object sender, EventArgs e)
         {
 

@@ -16,5 +16,20 @@ namespace WebBrowser.UI
         {
             InitializeComponent();
         }
+
+        private void goButton_Click(object sender, EventArgs e)
+        {
+            // when the go button is pressed, it navigates to the url in browser.
+            browser1.Navigate(addressTextBox.Text);
+        }
+
+        private void addressTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            // when enter is pressed on the address box, it navigates to the url in browser.
+            if (e.KeyCode == Keys.Enter)
+            {
+                browser1.Navigate(addressTextBox.Text);
+            }
+        }
     }
 }
