@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bookmark Manager Item.cs">
+    <Compile Include="Bookmark Manager Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Bookmark Manager Item.Designer.cs">
-      <DependentUpon>Bookmark Manager Item.cs</DependentUpon>
+    <Compile Include="Bookmark Manager Form.Designer.cs">
+      <DependentUpon>Bookmark Manager Form.cs</DependentUpon>
     </Compile>
     <Compile Include="GHGAwesomeBrowser.cs">
       <SubType>Form</SubType>
@@ -72,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Bookmark Manager Form.resx">
+      <DependentUpon>Bookmark Manager Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GHGAwesomeBrowser.resx">
       <DependentUpon>GHGAwesomeBrowser.cs</DependentUpon>
     </EmbeddedResource>
