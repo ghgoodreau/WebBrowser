@@ -110,5 +110,11 @@
   <ItemGroup>
     <None Include="Resources\iconfinder_web_13526.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebBrowser.Logic\WebBrowser.Logic.csproj">
+      <Project>{b5d47d32-17cf-4c36-b40e-3b3f34689549}</Project>
+      <Name>WebBrowser.Logic</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
