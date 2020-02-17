@@ -36,7 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "Bookmark_Manager_Item";
-            this.Text = "Bookmark_Manager_Form";
+            this.Text = "Bookmark Manager";
             this.ResumeLayout(false);
 
         }

@@ -78,6 +78,9 @@
     <EmbeddedResource Include="GHGAwesomeBrowser.resx">
       <DependentUpon>GHGAwesomeBrowser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="History Manager Form.resx">
+      <DependentUpon>History Manager Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyFirstUserControl.resx">
       <DependentUpon>MyFirstUserControl.cs</DependentUpon>
     </EmbeddedResource>
