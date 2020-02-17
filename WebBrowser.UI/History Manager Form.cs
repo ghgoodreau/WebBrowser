@@ -18,8 +18,7 @@ namespace WebBrowser.UI
             InitializeComponent();
         }
 
-        // onload event
-        private void History_ManagerForm_Load(object sender, System.EventArgs e)
+        private void History_Manager_Form_Load(object sender, EventArgs e)
         {
             var items = HistoryManager.GetItems();
             foreach (var item in items)

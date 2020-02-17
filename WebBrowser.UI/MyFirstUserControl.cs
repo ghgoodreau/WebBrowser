@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WebBrowser.Logic;
 
 namespace WebBrowser.UI
 {
@@ -25,6 +26,9 @@ namespace WebBrowser.UI
         {
             // when the go button is pressed, it navigates to the url in browser.
             browser1.Navigate(addressTextBox.Text);
+
+            // when the go button is pressed, it adds to history
+            var historyItem = new HistoryItem();
         }
 
         private void addressTextBox_KeyDown(object sender, KeyEventArgs e)

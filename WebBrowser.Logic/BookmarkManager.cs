@@ -7,7 +7,7 @@ using WebBrowser.Data.BookmarksDataSetTableAdapters;
 
 namespace WebBrowser.Logic
 {
-    class BookmarkManager
+    public class BookmarkManager
     {
         public static void AddItem(BookmarkItem item)
         {
