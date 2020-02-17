@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WebBrowser.Data.HistoryDataSetTableAdapters;
+
 namespace WebBrowser.Logic
 {
-    class HistoryManager
+    public class HistoryManager
     {
         public static void AddItem(HistoryItem item)
         {
