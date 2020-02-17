@@ -41,14 +41,15 @@ namespace WebBrowser.UI
             if (e.KeyCode == Keys.Enter)
             {
                 browser1.Navigate(addressTextBox.Text);
-            }
 
-            // when enter is pressed it adds to history
-            var historyItem = new HistoryItem();
-            historyItem.URL = addressTextBox.Text;
-            historyItem.Title = browser1.DocumentTitle;
-            historyItem.Date = DateTime.Now;
-            HistoryManager.AddItem(historyItem);
+
+                // when enter is pressed it adds to history
+                var historyItem = new HistoryItem();
+                historyItem.URL = addressTextBox.Text;
+                historyItem.Title = browser1.DocumentTitle;
+                historyItem.Date = DateTime.Now;
+                HistoryManager.AddItem(historyItem);
+            }
         }
 
         private void backButton_Click(object sender, EventArgs e)
