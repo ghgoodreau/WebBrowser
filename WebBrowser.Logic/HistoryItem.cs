@@ -8,5 +8,21 @@ namespace WebBrowser.Logic
 {
     class HistoryItem
     {
+        public int Id
+        {
+            get; set;
+        }
+        public string URL
+        {
+            get; set;
+        }
+        public string Title
+        {
+            get; set;
+        }
+        public DateTime Date
+        {
+            get; set;
+        }
     }
 }
