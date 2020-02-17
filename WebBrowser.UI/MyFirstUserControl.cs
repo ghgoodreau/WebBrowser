@@ -29,6 +29,10 @@ namespace WebBrowser.UI
 
             // when the go button is pressed, it adds to history
             var historyItem = new HistoryItem();
+            historyItem.URL = addressTextBox.Text;
+            historyItem.Title = browser1.DocumentTitle;
+            historyItem.Date = DateTime.Now;
+            HistoryManager.AddItem(historyItem);
         }
 
         private void addressTextBox_KeyDown(object sender, KeyEventArgs e)
