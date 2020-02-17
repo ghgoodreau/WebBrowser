@@ -61,5 +61,11 @@ namespace WebBrowser.UI
             var historyItem = new History_Manager_Form();
             historyItem.ShowDialog();
         }
+
+        private void manageBookmarksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var bookmarkItem = new Bookmark_Manager_Form();
+            bookmarkItem.ShowDialog();
+        }
     }
 }

@@ -55,7 +55,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(86, 3);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(552, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(583, 25);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -122,6 +122,7 @@
             this.bookmarkButton.Name = "bookmarkButton";
             this.bookmarkButton.Size = new System.Drawing.Size(23, 22);
             this.bookmarkButton.Text = "toolStripButton1";
+            this.bookmarkButton.Click += new System.EventHandler(this.bookmarkButton_Click);
             // 
             // browser1
             // 

@@ -11,9 +11,9 @@ using WebBrowser.Logic;
 
 namespace WebBrowser.UI
 {
-    public partial class Bookmark_Manager_Item : Form
+    public partial class Bookmark_Manager_Form : Form
     {
-        public Bookmark_Manager_Item()
+        public Bookmark_Manager_Form()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace WebBrowser.UI
 {
-    partial class Bookmark_Manager_Item
+    partial class Bookmark_Manager_Form
     {
         /// <summary>
         /// Required designer variable.
