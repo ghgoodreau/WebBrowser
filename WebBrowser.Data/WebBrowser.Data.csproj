@@ -78,12 +78,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="History.mdf">
+    <Content Include="db.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="History_log.ldf">
+    <Content Include="db_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>History.mdf</DependentUpon>
+      <DependentUpon>db.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>
