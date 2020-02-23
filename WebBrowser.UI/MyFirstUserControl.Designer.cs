@@ -138,6 +138,7 @@
             this.browser1.Size = new System.Drawing.Size(757, 492);
             this.browser1.TabIndex = 4;
             this.browser1.Navigated += new System.Windows.Forms.WebBrowserNavigatedEventHandler(this.browser1_Navigated_1);
+            this.browser1.ProgressChanged += new System.Windows.Forms.WebBrowserProgressChangedEventHandler(this.browser1_ProgressChanged);
             // 
             // statusStrip1
             // 

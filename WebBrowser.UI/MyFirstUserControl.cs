@@ -85,5 +85,11 @@ namespace WebBrowser.UI
             bookmarkItem.Title = browser1.DocumentTitle;
             BookmarkManager.AddItem(bookmarkItem);
         }
+
+        private void browser1_ProgressChanged(object sender, WebBrowserProgressChangedEventArgs e)
+        {
+            progressBar1.Value = Convert.ToInt32(e.CurrentProgress);
+            progressBar1.Maximum = Convert.ToInt32(e.MaximumProgress);
+        }
     }
 }
