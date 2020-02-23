@@ -150,6 +150,7 @@
             // 
             // progressBar1
             // 
+            this.progressBar1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.progressBar1.Location = new System.Drawing.Point(86, 501);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(448, 23);
@@ -157,6 +158,7 @@
             // 
             // statusLabel
             // 
+            this.statusLabel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.statusLabel.AutoSize = true;
             this.statusLabel.Location = new System.Drawing.Point(607, 501);
             this.statusLabel.Name = "statusLabel";
