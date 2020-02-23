@@ -88,8 +88,25 @@ namespace WebBrowser.UI
 
         private void browser1_ProgressChanged(object sender, WebBrowserProgressChangedEventArgs e)
         {
-            progressBar1.Value = Convert.ToInt32(e.CurrentProgress);
-            progressBar1.Maximum = Convert.ToInt32(e.MaximumProgress);
+            // progress bar values
+            try
+            {
+                progressBar1.Value = Convert.ToInt32(e.CurrentProgress);
+                progressBar1.Maximum = Convert.ToInt32(e.MaximumProgress);
+            }
+            catch (Exception ex)
+            {
+                // dont know
+            }
+
+            if (progressBar1.Value < e.MaximumProgress)
+            {
+                statusLabel.Text = "loading...";
+            }
+            else
+            {
+                statusLabel.Text = "done";
+            }
         }
     }
 }
