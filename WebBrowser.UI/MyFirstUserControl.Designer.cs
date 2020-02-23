@@ -38,6 +38,8 @@
             this.bookmarkButton = new System.Windows.Forms.ToolStripButton();
             this.browser1 = new System.Windows.Forms.WebBrowser();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.statusLabel = new System.Windows.Forms.Label();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -145,10 +147,28 @@
             this.statusStrip1.TabIndex = 5;
             this.statusStrip1.Text = "statusStrip1";
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(86, 501);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(448, 23);
+            this.progressBar1.TabIndex = 6;
+            // 
+            // statusLabel
+            // 
+            this.statusLabel.AutoSize = true;
+            this.statusLabel.Location = new System.Drawing.Point(607, 501);
+            this.statusLabel.Name = "statusLabel";
+            this.statusLabel.Size = new System.Drawing.Size(31, 13);
+            this.statusLabel.TabIndex = 7;
+            this.statusLabel.Text = "done";
+            // 
             // MyFirstUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.statusLabel);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.browser1);
             this.Controls.Add(this.toolStrip1);
@@ -173,5 +193,7 @@
         private System.Windows.Forms.ToolStripButton bookmarkButton;
         private System.Windows.Forms.WebBrowser browser1;
         private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Label statusLabel;
     }
 }
