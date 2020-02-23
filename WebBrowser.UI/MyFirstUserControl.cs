@@ -108,5 +108,10 @@ namespace WebBrowser.UI
                 statusLabel.Text = "done";
             }
         }
+
+        private void homeButton_Click(object sender, EventArgs e)
+        {
+            browser1.Navigate("ghgoodreau.github.io");
+        }
     }
 }

@@ -58,7 +58,7 @@
             this.toolStrip1.Location = new System.Drawing.Point(86, 3);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(552, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(583, 25);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -100,6 +100,7 @@
             this.homeButton.Name = "homeButton";
             this.homeButton.Size = new System.Drawing.Size(23, 22);
             this.homeButton.Text = "toolStripButton4";
+            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
             // 
             // addressTextBox
             // 

@@ -177,6 +177,7 @@
             this.myFirstUserControl1.Name = "myFirstUserControl1";
             this.myFirstUserControl1.Size = new System.Drawing.Size(800, 409);
             this.myFirstUserControl1.TabIndex = 0;
+            this.myFirstUserControl1.Load += new System.EventHandler(this.myFirstUserControl1_Load);
             // 
             // clearHistoryToolStripMenuItem
             // 

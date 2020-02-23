@@ -67,5 +67,10 @@ namespace WebBrowser.UI
             var bookmarkItem = new Bookmark_Manager_Form();
             bookmarkItem.ShowDialog();
         }
+
+        private void myFirstUserControl1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
