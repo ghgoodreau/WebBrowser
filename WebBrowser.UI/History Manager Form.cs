@@ -30,6 +30,7 @@ namespace WebBrowser.UI
         private void histSearchButton_Click(object sender, EventArgs e)
         {
             var items = HistoryManager.GetItems();
+            historyListBox.Items.Clear();
             foreach (var item in items)
             {
                 if (item.Title.Contains(histSearchBox.Text))
