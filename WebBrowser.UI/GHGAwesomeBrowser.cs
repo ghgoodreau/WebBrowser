@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WebBrowser.Logic;
+using System.Data.SqlClient;
 
 // author Gregory Goodreau
 // version 2/1/2020
@@ -20,7 +22,7 @@ namespace WebBrowser.UI
         {
             InitializeComponent();
         }
-
+        
         // will display pop up about me
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -71,6 +73,11 @@ namespace WebBrowser.UI
         private void myFirstUserControl1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        // clear the history database
+        private void clearHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
         }
     }
 }

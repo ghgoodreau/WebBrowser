@@ -34,14 +34,10 @@ namespace WebBrowser.Logic
             return results;
         }
 
+        // delete all rows in History Items List
         public static void DeleteHist()
         {
-            var adapter = new HistoryTableAdapter();
-            var rows = adapter.GetData();
-            foreach (var row in rows)
-            {
-                row.Delete();
-            }
+
         }
     }
 }
