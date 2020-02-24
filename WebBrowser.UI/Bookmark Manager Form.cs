@@ -23,13 +23,22 @@ namespace WebBrowser.UI
             var items = BookmarkManager.GetItems();
             foreach (var item in items)
             {
-                bookmarkListBox.Items.Add(string.Format("{0} [{1}]", item.Title, item.URL));
+                bookmarkListBox.Items.Add(string.Format("{0} ({1})", item.Title, item.URL));
             }
         }
 
         private void bookSearchButton_Click(object sender, EventArgs e)
         {
-
+            // TODO: make case insensitive
+            var items = BookmarkManager.GetItems();
+            bookmarkListBox.Items.Clear();
+            foreach (var item in items)
+            {
+                if (item.Title.Contains(bookSearchTextBox.Text))
+                {
+                    bookmarkListBox.Items.Add(string.Format("{0} ({1})", item.Title, item.URL));
+                }
+            }
         }
 
         private void bookDeleteButton_Click(object sender, EventArgs e)
