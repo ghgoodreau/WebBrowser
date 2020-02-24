@@ -32,14 +32,19 @@ namespace WebBrowser.Logic
             return results;
         }
 
-        public static void DeleteBook()
+        public static void DeleteBook(string candidate)
         {
             var adapter = new BookmarksTableAdapter();
             var rows = adapter.GetData();
 
             foreach (var row in rows)
             {
-                adapter.Delete(row.Id, row.Title);
+                string rowChecker = string.Format(string.Format("{0} ({1})", row.URL, row.Title));
+
+                if (rowChecker == candidate)
+                {
+                    adapter.Delete(row.Id, row.Title);
+                }
             }
         }
     }

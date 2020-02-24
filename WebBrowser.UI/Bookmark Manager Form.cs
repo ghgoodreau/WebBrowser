@@ -45,8 +45,11 @@ namespace WebBrowser.UI
         // delete button method
         private void bookDeleteButton_Click(object sender, EventArgs e)
         {
-            var candidate = bookmarkListBox.SelectedIndex;
-            bookmarkListBox.Items.RemoveAt(candidate);
+            // var candidate = bookmarkListBox.SelectedIndex;
+            // bookmarkListBox.Items.RemoveAt(candidate);
+            string candidate = bookmarkListBox.GetItemText(bookmarkListBox.SelectedItem);
+            BookmarkManager.DeleteBook(candidate);
+            bookmarkListBox.Items.RemoveAt(bookmarkListBox.SelectedIndex);
         }
     }
 }
