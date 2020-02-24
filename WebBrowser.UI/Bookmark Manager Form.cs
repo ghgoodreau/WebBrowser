@@ -18,16 +18,17 @@ namespace WebBrowser.UI
             InitializeComponent();
         }
 
+        // bookmark form load method
         // somehow the title and URL are backwards... but we move forward!
         private void Bookmark_Manager_Item_Load(object sender, EventArgs e)
         {
             var items = BookmarkManager.GetItems();
             foreach (var item in items)
             {
-                bookmarkListBox.Items.Add(string.Format("{0} ({1})", item.Title, item.URL));
+                bookmarkListBox.Items.Add(string.Format("{0} ({1})", item.URL, item.Title));
             }
         }
-
+        // search button method
         private void bookSearchButton_Click(object sender, EventArgs e)
         {
             // TODO: make case insensitive
@@ -37,11 +38,11 @@ namespace WebBrowser.UI
             {
                 if (item.URL.Contains(bookSearchTextBox.Text))
                 {
-                    bookmarkListBox.Items.Add(string.Format("{0} ({1})", item.Title, item.URL));
+                    bookmarkListBox.Items.Add(string.Format("{0} ({1})", item.URL, item.Title));
                 }
             }
         }
-
+        // delete button method
         private void bookDeleteButton_Click(object sender, EventArgs e)
         {
             var candidate = bookmarkListBox.SelectedIndex;
