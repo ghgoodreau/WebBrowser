@@ -27,6 +27,7 @@ namespace WebBrowser.UI
             }
         }
 
+        // searches history and displays any matches
         private void histSearchButton_Click(object sender, EventArgs e)
         {
             // TODO: make case insensitive
@@ -41,14 +42,18 @@ namespace WebBrowser.UI
             }
         }
 
+        // deletes selected item from history
         private void histDeleteButton_Click(object sender, EventArgs e)
         {
-
+            var candidate = historyListBox.SelectedIndex;
+            historyListBox.Items.RemoveAt(candidate);
         }
 
+        // clears all items from history
         private void histClearButton_Click(object sender, EventArgs e)
         {
-
+            // clears history list
+            historyListBox.Items.Clear();
         }
     }
 }
