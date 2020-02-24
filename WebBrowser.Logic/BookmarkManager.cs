@@ -31,5 +31,16 @@ namespace WebBrowser.Logic
             }
             return results;
         }
+
+        public static void DeleteBook()
+        {
+            var adapter = new BookmarksTableAdapter();
+            var rows = adapter.GetData();
+
+            foreach (var row in rows)
+            {
+                adapter.Delete(row.Id, row.Title);
+            }
+        }
     }
 }
