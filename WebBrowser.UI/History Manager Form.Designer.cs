@@ -48,6 +48,9 @@
             // 
             // histSearchBox
             // 
+            this.histSearchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.histSearchBox.Location = new System.Drawing.Point(92, 18);
             this.histSearchBox.Name = "histSearchBox";
             this.histSearchBox.Size = new System.Drawing.Size(292, 20);
@@ -55,30 +58,36 @@
             // 
             // histSearchButton
             // 
+            this.histSearchButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.histSearchButton.Location = new System.Drawing.Point(399, 18);
             this.histSearchButton.Name = "histSearchButton";
             this.histSearchButton.Size = new System.Drawing.Size(75, 23);
             this.histSearchButton.TabIndex = 2;
             this.histSearchButton.Text = "search";
             this.histSearchButton.UseVisualStyleBackColor = true;
+            this.histSearchButton.Click += new System.EventHandler(this.histSearchButton_Click);
             // 
             // histDeleteButton
             // 
+            this.histDeleteButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.histDeleteButton.Location = new System.Drawing.Point(515, 18);
             this.histDeleteButton.Name = "histDeleteButton";
             this.histDeleteButton.Size = new System.Drawing.Size(75, 23);
             this.histDeleteButton.TabIndex = 3;
             this.histDeleteButton.Text = "delete";
             this.histDeleteButton.UseVisualStyleBackColor = true;
+            this.histDeleteButton.Click += new System.EventHandler(this.histDeleteButton_Click);
             // 
             // histClearButton
             // 
-            this.histClearButton.Location = new System.Drawing.Point(596, 18);
+            this.histClearButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.histClearButton.Location = new System.Drawing.Point(606, 18);
             this.histClearButton.Name = "histClearButton";
             this.histClearButton.Size = new System.Drawing.Size(75, 23);
             this.histClearButton.TabIndex = 4;
             this.histClearButton.Text = "clear";
             this.histClearButton.UseVisualStyleBackColor = true;
+            this.histClearButton.Click += new System.EventHandler(this.histClearButton_Click);
             // 
             // History_Manager_Form
             // 

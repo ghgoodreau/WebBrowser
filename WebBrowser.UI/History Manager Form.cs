@@ -26,5 +26,20 @@ namespace WebBrowser.UI
                 historyListBox.Items.Add(string.Format("[{0}] {1} ({2})", item.Date, item.Title, item.URL));
             }
         }
+
+        private void histSearchButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void histDeleteButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void histClearButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
