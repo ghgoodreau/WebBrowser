@@ -18,6 +18,7 @@ namespace WebBrowser.UI
             InitializeComponent();
         }
 
+        // somehow the title and URL are backwards... but we move forward!
         private void Bookmark_Manager_Item_Load(object sender, EventArgs e)
         {
             var items = BookmarkManager.GetItems();
@@ -34,7 +35,7 @@ namespace WebBrowser.UI
             bookmarkListBox.Items.Clear();
             foreach (var item in items)
             {
-                if (item.Title.Contains(bookSearchTextBox.Text))
+                if (item.URL.Contains(bookSearchTextBox.Text))
                 {
                     bookmarkListBox.Items.Add(string.Format("{0} ({1})", item.Title, item.URL));
                 }
@@ -43,7 +44,8 @@ namespace WebBrowser.UI
 
         private void bookDeleteButton_Click(object sender, EventArgs e)
         {
-
+            var candidate = bookmarkListBox.SelectedIndex;
+            bookmarkListBox.Items.RemoveAt(candidate);
         }
     }
 }

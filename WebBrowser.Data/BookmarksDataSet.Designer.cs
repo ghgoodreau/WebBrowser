@@ -414,10 +414,10 @@ namespace WebBrowser.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public BookmarksRow AddBookmarksRow(int Id, string URL, string Title) {
+            public BookmarksRow AddBookmarksRow(string URL, string Title) {
                 BookmarksRow rowBookmarksRow = ((BookmarksRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Id,
+                        null,
                         URL,
                         Title};
                 rowBookmarksRow.ItemArray = columnValuesArray;
@@ -465,7 +465,11 @@ namespace WebBrowser.Data {
                 base.Columns.Add(this.columnTitle);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
+                this.columnId.AutoIncrement = true;
+                this.columnId.AutoIncrementSeed = -1;
+                this.columnId.AutoIncrementStep = -1;
                 this.columnId.AllowDBNull = false;
+                this.columnId.ReadOnly = true;
                 this.columnId.Unique = true;
                 this.columnURL.AllowDBNull = false;
                 this.columnURL.MaxLength = 50;
@@ -704,10 +708,10 @@ namespace WebBrowser.Data {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Bookmarks1Row AddBookmarks1Row(int Id, string URL, string Title) {
+            public Bookmarks1Row AddBookmarks1Row(string URL, string Title) {
                 Bookmarks1Row rowBookmarks1Row = ((Bookmarks1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Id,
+                        null,
                         URL,
                         Title};
                 rowBookmarks1Row.ItemArray = columnValuesArray;
@@ -755,6 +759,9 @@ namespace WebBrowser.Data {
                 base.Columns.Add(this.columnTitle);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
+                this.columnId.AutoIncrement = true;
+                this.columnId.AutoIncrementSeed = -1;
+                this.columnId.AutoIncrementStep = -1;
                 this.columnId.AllowDBNull = false;
                 this.columnId.Unique = true;
                 this.columnURL.AllowDBNull = false;
@@ -1182,32 +1189,29 @@ namespace WebBrowser.Data.BookmarksDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Bookmarks] WHERE (([Id] = @Original_Id) AND ([URL] = @Original" +
-                "_URL) AND ([Title] = @Original_Title))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Bookmarks] WHERE (([Id] = @Original_Id) AND ([Title] = @Original_Tit" +
+                "le))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_URL", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "URL", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Title", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Title", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Bookmarks] ([Id], [URL], [Title]) VALUES (@Id, @URL, @Title);\r" +
-                "\nSELECT Id, URL, Title FROM Bookmarks WHERE (Id = @Id)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [Bookmarks] ([URL], [Title]) VALUES (@URL, @Title);\r\nSELECT Id, URL, " +
+                "Title FROM Bookmarks WHERE (Id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@URL", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "URL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Title", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Title", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Bookmarks] SET [Id] = @Id, [URL] = @URL, [Title] = @Title WHERE (([" +
-                "Id] = @Original_Id) AND ([URL] = @Original_URL) AND ([Title] = @Original_Title))" +
-                ";\r\nSELECT Id, URL, Title FROM Bookmarks WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [Bookmarks] SET [URL] = @URL, [Title] = @Title WHERE (([Id] = @Original_Id" +
+                ") AND ([Title] = @Original_Title));\r\nSELECT Id, URL, Title FROM Bookmarks WHERE " +
+                "(Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@URL", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "URL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Title", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Title", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_URL", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "URL", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Title", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Title", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1223,7 +1227,7 @@ namespace WebBrowser.Data.BookmarksDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, URL, Title FROM dbo.Bookmarks";
+            this._commandCollection[0].CommandText = "SELECT        Id, URL, Title\r\nFROM            Bookmarks";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1284,19 +1288,13 @@ namespace WebBrowser.Data.BookmarksDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, string Original_URL, string Original_Title) {
+        public virtual int Delete(int Original_Id, string Original_Title) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
-            if ((Original_URL == null)) {
-                throw new global::System.ArgumentNullException("Original_URL");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_URL));
-            }
             if ((Original_Title == null)) {
                 throw new global::System.ArgumentNullException("Original_Title");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Title));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Title));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1318,19 +1316,18 @@ namespace WebBrowser.Data.BookmarksDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int Id, string URL, string Title) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Id));
+        public virtual int Insert(string URL, string Title) {
             if ((URL == null)) {
                 throw new global::System.ArgumentNullException("URL");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(URL));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(URL));
             }
             if ((Title == null)) {
                 throw new global::System.ArgumentNullException("Title");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Title));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Title));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1352,33 +1349,27 @@ namespace WebBrowser.Data.BookmarksDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int Id, string URL, string Title, int Original_Id, string Original_URL, string Original_Title) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Id));
+        public virtual int Update(string URL, string Title, int Original_Id, string Original_Title, int Id) {
             if ((URL == null)) {
                 throw new global::System.ArgumentNullException("URL");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(URL));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(URL));
             }
             if ((Title == null)) {
                 throw new global::System.ArgumentNullException("Title");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Title));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Title));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_Id));
-            if ((Original_URL == null)) {
-                throw new global::System.ArgumentNullException("Original_URL");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_URL));
-            }
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_Id));
             if ((Original_Title == null)) {
                 throw new global::System.ArgumentNullException("Original_Title");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_Title));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_Title));
             }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1399,8 +1390,8 @@ namespace WebBrowser.Data.BookmarksDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string URL, string Title, int Original_Id, string Original_URL, string Original_Title) {
-            return this.Update(Original_Id, URL, Title, Original_Id, Original_URL, Original_Title);
+        public virtual int Update(string URL, string Title, int Original_Id, string Original_Title) {
+            return this.Update(URL, Title, Original_Id, Original_Title, Original_Id);
         }
     }
     
