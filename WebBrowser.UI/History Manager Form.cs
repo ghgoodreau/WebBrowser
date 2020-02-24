@@ -45,15 +45,21 @@ namespace WebBrowser.UI
         // deletes selected item from history
         private void histDeleteButton_Click(object sender, EventArgs e)
         {
-            var candidate = historyListBox.SelectedIndex;
-            historyListBox.Items.RemoveAt(candidate);
+            // finds candidate for deletion
+            string candidate = historyListBox.GetItemText(historyListBox.SelectedItem);
+            // calls HistoryManager RemoveHist method which deletes the row
+            HistoryManager.RemoveHist(candidate);
+            // deletes the list box selected row as well.
+            historyListBox.Items.RemoveAt(historyListBox.SelectedIndex);
         }
 
         // clears all items from history
         private void histClearButton_Click(object sender, EventArgs e)
         {
-            // clears history list
+            // clears history database
             HistoryManager.DeleteHist();
+            // clears history list
+            historyListBox.Items.Clear();
         }
     }
 }
