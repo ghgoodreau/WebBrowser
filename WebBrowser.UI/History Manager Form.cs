@@ -29,6 +29,7 @@ namespace WebBrowser.UI
 
         private void histSearchButton_Click(object sender, EventArgs e)
         {
+            // TODO: make case insensitive
             var items = HistoryManager.GetItems();
             historyListBox.Items.Clear();
             foreach (var item in items)
