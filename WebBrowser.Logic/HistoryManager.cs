@@ -37,7 +37,13 @@ namespace WebBrowser.Logic
         // delete all rows in History Items List
         public static void DeleteHist()
         {
+            var adapter = new HistoryTableAdapter();
+            var rows = adapter.GetData();
 
+            foreach (var row in rows)
+            {
+                adapter.Delete(row.Id, row.URL, row.Title, row.Date);
+            }
         }
     }
 }

@@ -78,6 +78,7 @@ namespace WebBrowser.UI
         // clear the history database
         private void clearHistoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            HistoryManager.DeleteHist();
         }
     }
 }
