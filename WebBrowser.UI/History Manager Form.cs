@@ -53,7 +53,7 @@ namespace WebBrowser.UI
         private void histClearButton_Click(object sender, EventArgs e)
         {
             // clears history list
-            historyListBox.Items.Clear();
+            HistoryManager.DeleteHist();
         }
     }
 }
