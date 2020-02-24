@@ -29,7 +29,14 @@ namespace WebBrowser.UI
 
         private void histSearchButton_Click(object sender, EventArgs e)
         {
-
+            var items = HistoryManager.GetItems();
+            foreach (var item in items)
+            {
+                if (item.Title.Contains(histSearchBox.Text))
+                {
+                    historyListBox.Items.Add(string.Format("[{0}] {1} ({2})", item.Date, item.Title, item.URL));
+                }
+            }
         }
 
         private void histDeleteButton_Click(object sender, EventArgs e)
