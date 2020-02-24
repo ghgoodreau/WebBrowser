@@ -26,5 +26,15 @@ namespace WebBrowser.UI
                 bookmarkListBox.Items.Add(string.Format("{0} [{1}]", item.Title, item.URL));
             }
         }
+
+        private void bookSearchButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bookDeleteButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
