@@ -12,9 +12,12 @@ This program was built with the intention of learning software construction fund
 Here are some screenshots of the program and some of it's functionalities. 
 ![Web Browser](https://i.imgur.com/8fqJGIR.png)
 This is the main browser form. 
+<br/><br/>
 ![Tool Dropdown](https://i.imgur.com/ql0XhqZ.png)
 When clicking on the "Tool" option, this dropdown with some options is shown.
+<br/><br/>
 ![History Manager](https://i.imgur.com/LDnJ4OI.png)
 The history manager form shows a MySQL database with history items. You can search, delete selected, or clear the items.
+<br/><br/>
 ![Boomark Manager](https://i.imgur.com/Otm4wYM.png)
 The bookmark manager form shows a MySQL database with bookmark items. You can search, delete selected, or clear the items.
