@@ -12,7 +12,7 @@ This program was built with the intention of learning software construction fund
 Here are some screenshots of the program and some of it's functionalities. 
 ![Web Browser](https://i.imgur.com/8fqJGIR.png)
 <br/>
-This is the main browser form. 
+This is the main browser form. As you can see, there are a lot of tool strip icons. Including a back, forward, refresh, home, go, and bookmark button. All of these are fully functional and work as intended. The browser also supports multiple tabs.
 <br/><br/>
 ![Tool Dropdown](https://i.imgur.com/ql0XhqZ.png)
 <br/>
@@ -24,4 +24,8 @@ The history manager form shows a MySQL database with history items. You can sear
 <br/><br/>
 ![Boomark Manager](https://i.imgur.com/Otm4wYM.png)
 <br/>
-The bookmark manager form shows a MySQL database with bookmark items. You can search, delete selected, or clear the items.
+The bookmark manager form shows a MySQL database with bookmark items. You can search, delete selected, or clear the items. This is the only form that is buggy at the moment.
+
+# TODO
+- Have tab pages named based off of the website they are currently on
+- Fix the Bookmark table adapter error that sometimes occurs on certain websites (Amazon, for example)
