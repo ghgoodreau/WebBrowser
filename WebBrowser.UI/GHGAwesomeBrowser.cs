@@ -10,9 +10,11 @@ using System.Windows.Forms;
 using WebBrowser.Logic;
 using System.Data.SqlClient;
 
-// author Gregory Goodreau
-// version 2/1/2020
-// Web Browser Class Project 
+/// <summary>
+/// AUTHOR GREGORY GOODREAU
+/// VERSION 3/26/2020
+/// WEB BROWSER
+/// </summary>
 
 namespace WebBrowser.UI
 {
@@ -23,26 +25,34 @@ namespace WebBrowser.UI
             InitializeComponent();
         }
         
-        // will display pop up about me
+        ///////////////////////////////////////////
+        // DISPLAYS POP-UP MESSAGE BOX ABOUT ME //
+        /////////////////////////////////////////
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Hey! My name is Gregory Goodreau (ghg0004). I am online Auburn Student. " +
                 "This is my web browser that I am incrimentally designing over the course of a semester.");
         }
 
-        // exits the web browser
+        /////////////////////////////////////////
+        // EXITS THE WEB BROWSER WHEN CLICKED //
+        ///////////////////////////////////////
         private void exitWebBrowserToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        // loads browser
+        /////////////////////////////////////////
+        // LOADS THE WEB BROWSER WHEN CLICKED //
+        ///////////////////////////////////////
         private void GHGAwesomeBrowser_Load(object sender, EventArgs e)
         {
 
         }
 
-        // creates a new tab
+        /////////////////////////////////////
+        // CREATES A NEW TAB WHEN CLICKED //
+        ///////////////////////////////////
         private void newTabToolStripMenuItem_Click(object sender, EventArgs e)
         {
             TabPage newTabPage = new TabPage("New Tab");
@@ -52,18 +62,24 @@ namespace WebBrowser.UI
             newTabPage.Controls.Add(newTabControl);
         }
 
-        // closes current tab
+        //////////////////////////////////////
+        // CLOSES CURRENT TAB WHEN CLICKED //
+        ////////////////////////////////////
         private void closeCurrentTabToolStripMenuItem_Click(object sender, EventArgs e)
         {
             tabControl1.TabPages.Remove(tabControl1.SelectedTab);
         }
-
+        //////////////////////////////////////
+        // SHOWS HISTORY FORM WHEN CLICKED //
+        ////////////////////////////////////
         private void manageHistoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var historyItem = new History_Manager_Form();
             historyItem.ShowDialog();
         }
-
+        ///////////////////////////////////////
+        // SHOWS BOOKMARK FORM WHEN CLICKED //
+        /////////////////////////////////////
         private void manageBookmarksToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var bookmarkItem = new Bookmark_Manager_Form();
@@ -75,7 +91,9 @@ namespace WebBrowser.UI
 
         }
 
-        // clear the history database
+        ///////////////////////////////////////////
+        // CLEARS HISTORY DATABASE WHEN CLICKED //
+        /////////////////////////////////////////
         private void clearHistoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
             HistoryManager.DeleteHist();

@@ -9,11 +9,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WebBrowser.Logic;
 
+/// <summary>
+/// AUTHOR GREGORY GOODREAU
+/// VERSION 3/26/2020
+/// WEB BROWSER
+/// </summary>
+
 namespace WebBrowser.UI
 {
     public partial class MyFirstUserControl : UserControl
     {
-        // forward and back stacks
+        /////////////////////////////////////////////////
+        // FORWARD AND BACKWARD STACKS FOR NAVIGATION //
+        ///////////////////////////////////////////////
         public Stack<string> forwardLinks = new Stack<string>();
         public Stack<string> backwardLinks = new Stack<string>();
 
@@ -22,6 +30,9 @@ namespace WebBrowser.UI
             InitializeComponent();
         }
 
+        ////////////////////////////////////////////////////////
+        // NAVIGATES TO WEB PAGE IN ADDRESS BAR WHEN CLICKED //
+        //////////////////////////////////////////////////////
         private void goButton_Click(object sender, EventArgs e)
         {
             // when the go button is pressed, it navigates to the url in browser.
@@ -35,6 +46,9 @@ namespace WebBrowser.UI
             HistoryManager.AddItem(historyItem);
         }
 
+        //////////////////////////////////////////////////////////////////
+        // NAVIGATES TO WEB PAGE IN ADDRESS BAR WHEN ENTER KEY PRESSED //
+        ////////////////////////////////////////////////////////////////
         private void addressTextBox_KeyDown(object sender, KeyEventArgs e)
         {
             // when enter is pressed on the address box, it navigates to the url in browser.
@@ -52,6 +66,9 @@ namespace WebBrowser.UI
             }
         }
 
+        /////////////////////////////////////////////////////
+        // NAVIGATES BACK A PAGE WHEN BACK BUTTON CLICKED //
+        ///////////////////////////////////////////////////
         private void backButton_Click(object sender, EventArgs e)
         {
             // navigates back a page
@@ -59,6 +76,9 @@ namespace WebBrowser.UI
             browser1.GoBack();
         }
 
+        ////////////////////////////////////////////////////////
+        // NAVIGATES FORWARD A PAGE WHEN BACK BUTTON CLICKED //
+        //////////////////////////////////////////////////////
         private void forwardButton_Click(object sender, EventArgs e)
         {
             // navigates forward a page
@@ -66,18 +86,26 @@ namespace WebBrowser.UI
             browser1.GoForward();
         }
 
+        //////////////////////////////////////
+        // REFRESHES THE PAGE WHEN CLICKED //
+        ////////////////////////////////////
         private void refreshButton_Click(object sender, EventArgs e)
         {
             // refreshes current page
             browser1.Refresh();
         }
 
-        // updates address text box to display current url
+        //////////////////////////////////////////////////////
+        // UPDATES ADDRESS TEXT BOX TO DISPLAY CURRENT URL //
+        ////////////////////////////////////////////////////
         private void browser1_Navigated_1(object sender, WebBrowserNavigatedEventArgs e)
         {
             addressTextBox.Text = browser1.Url.ToString();
         }
 
+        ///////////////////////////////////////////////////
+        // ADDS A BOOKMARK TO THE DATABASE WHEN CLICKED //
+        /////////////////////////////////////////////////
         private void bookmarkButton_Click(object sender, EventArgs e)
         {
             var bookmarkItem = new BookmarkItem();
@@ -86,6 +114,9 @@ namespace WebBrowser.UI
             BookmarkManager.AddItem(bookmarkItem);
         }
 
+        ///////////////////////////////////////////////////
+        // DISPLAYS A LOADING BAR WITH LOADING PROGRESS //
+        /////////////////////////////////////////////////
         private void browser1_ProgressChanged(object sender, WebBrowserProgressChangedEventArgs e)
         {
             // progress bar values
@@ -96,7 +127,7 @@ namespace WebBrowser.UI
             }
             catch (Exception ex)
             {
-                // dont know
+                // empty for now
             }
 
             if (progressBar1.Value < e.MaximumProgress)
@@ -109,6 +140,9 @@ namespace WebBrowser.UI
             }
         }
 
+        /////////////////////////////////////////////////////////
+        // NAGIVATES TO THE HOME PAGE WHICH IS STATICALLY SET //
+        ///////////////////////////////////////////////////////
         private void homeButton_Click(object sender, EventArgs e)
         {
             browser1.Navigate("ghgoodreau.github.io");

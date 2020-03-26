@@ -5,16 +5,31 @@ using System.Text;
 using System.Threading.Tasks;
 using WebBrowser.Data.HistoryDataSetTableAdapters;
 
+/// <summary>
+/// AUTHOR GREGORY GOODREAU
+/// VERSION 3/26/2020
+/// WEB BROWSER
+/// </summary>
+
 namespace WebBrowser.Logic
 {
+    /////////////////////////////////////////////
+    // METHODS THAT DRIVE THE HISTORY CLASSES //
+    ///////////////////////////////////////////
     public class HistoryManager
     {
+        ////////////////////////////////////
+        // ADDS HISTORY ITEM TO DATABASE //
+        //////////////////////////////////
         public static void AddItem(HistoryItem item)
         {
             var adapter = new HistoryTableAdapter();
             adapter.Insert(item.URL, item.Title, item.Date);
         }
 
+        /////////////////////////
+        // GETS HISTORY ITEMS //
+        ///////////////////////
         public static List<HistoryItem> GetItems()
         {
             var adapter = new HistoryTableAdapter();
@@ -34,7 +49,9 @@ namespace WebBrowser.Logic
             return results;
         }
 
-        // delete all rows in History Items List
+        ////////////////////////////
+        // DELETES HISTORY ITEMS //
+        //////////////////////////
         public static void DeleteHist()
         {
             var adapter = new HistoryTableAdapter();
@@ -46,6 +63,9 @@ namespace WebBrowser.Logic
             }
         }
 
+        //////////////////////////////////////
+        // REMOVES A SPECIFIC HISTORY ITEM //
+        ////////////////////////////////////
         public static void RemoveHist(string candidate)
         {
             var adapter = new HistoryTableAdapter();

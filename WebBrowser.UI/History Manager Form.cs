@@ -9,6 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WebBrowser.Logic;
 
+/// <summary>
+/// AUTHOR GREGORY GOODREAU
+/// VERSION 3/26/2020
+/// WEB BROWSER
+/// </summary>
+
 namespace WebBrowser.UI
 {
     public partial class History_Manager_Form : Form
@@ -18,6 +24,9 @@ namespace WebBrowser.UI
             InitializeComponent();
         }
 
+        ////////////////////////////////////////
+        // LOADS HISTORY ITEMS FROM DATABASE //
+        //////////////////////////////////////
         private void History_Manager_Form_Load(object sender, EventArgs e)
         {
             var items = HistoryManager.GetItems();
@@ -27,10 +36,11 @@ namespace WebBrowser.UI
             }
         }
 
-        // searches history and displays any matches
+        ////////////////////////////////////////////////
+        // SEARCHES HISTORY AND DISPLAYS ANY MATCHES //
+        //////////////////////////////////////////////
         private void histSearchButton_Click(object sender, EventArgs e)
         {
-            // TODO: make case insensitive
             var items = HistoryManager.GetItems();
             historyListBox.Items.Clear();
             foreach (var item in items)
@@ -42,7 +52,9 @@ namespace WebBrowser.UI
             }
         }
 
-        // deletes selected item from history
+        ///////////////////////////////////////
+        // DELETES SEARCH ITEM FROM HISTORY //
+        /////////////////////////////////////
         private void histDeleteButton_Click(object sender, EventArgs e)
         {
             // finds candidate for deletion
@@ -53,7 +65,9 @@ namespace WebBrowser.UI
             historyListBox.Items.RemoveAt(historyListBox.SelectedIndex);
         }
 
-        // clears all items from history
+        ////////////////////////////////////
+        // CLEARS ALL ITEMS FROM HISTORY //
+        //////////////////////////////////
         private void histClearButton_Click(object sender, EventArgs e)
         {
             // clears history database

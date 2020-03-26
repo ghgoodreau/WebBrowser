@@ -9,6 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WebBrowser.Logic;
 
+/// <summary>
+/// AUTHOR GREGORY GOODREAU
+/// VERSION 3/26/2020
+/// WEB BROWSER
+/// </summary>
+
 namespace WebBrowser.UI
 {
     public partial class Bookmark_Manager_Form : Form
@@ -18,8 +24,9 @@ namespace WebBrowser.UI
             InitializeComponent();
         }
 
-        // bookmark form load method
-        // somehow the title and URL are backwards... but we move forward!
+        /////////////////////////////////////////
+        // LOADS BOOKMARK TABLE FROM DATABASE //
+        ///////////////////////////////////////
         private void Bookmark_Manager_Item_Load(object sender, EventArgs e)
         {
             var items = BookmarkManager.GetItems();
@@ -28,10 +35,11 @@ namespace WebBrowser.UI
                 bookmarkListBox.Items.Add(string.Format("{0} ({1})", item.URL, item.Title));
             }
         }
-        // search button method
+        ////////////////////////////////////////////////
+        // SEARCHES FOR BOOKMARK ITEM BASED ON TITLE //
+        //////////////////////////////////////////////
         private void bookSearchButton_Click(object sender, EventArgs e)
         {
-            // TODO: make case insensitive
             var items = BookmarkManager.GetItems();
             bookmarkListBox.Items.Clear();
             foreach (var item in items)
@@ -42,11 +50,12 @@ namespace WebBrowser.UI
                 }
             }
         }
-        // delete button method
+
+        /////////////////////////////////////////////
+        // DELETES SELECTED BOOKMARK WHEN CLICKED //
+        ///////////////////////////////////////////
         private void bookDeleteButton_Click(object sender, EventArgs e)
         {
-            // var candidate = bookmarkListBox.SelectedIndex;
-            // bookmarkListBox.Items.RemoveAt(candidate);
             string candidate = bookmarkListBox.GetItemText(bookmarkListBox.SelectedItem);
             BookmarkManager.DeleteBook(candidate);
             bookmarkListBox.Items.RemoveAt(bookmarkListBox.SelectedIndex);

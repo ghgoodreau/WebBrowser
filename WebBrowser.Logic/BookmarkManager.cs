@@ -5,15 +5,31 @@ using System.Text;
 using System.Threading.Tasks;
 using WebBrowser.Data.BookmarksDataSetTableAdapters;
 
+/// <summary>
+/// AUTHOR GREGORY GOODREAU
+/// VERSION 3/26/2020
+/// WEB BROWSER
+/// </summary>
+
 namespace WebBrowser.Logic
 {
+    //////////////////////////////////////////////
+    // METHODS THAT DRIVE THE BOOKMARK CLASSES //
+    ////////////////////////////////////////////
     public class BookmarkManager
     {
+        //////////////////////////
+        // ADDS BOOKMARK ITEMS //
+        ////////////////////////
         public static void AddItem(BookmarkItem item)
         {
             var adapter = new BookmarksTableAdapter();
             adapter.Insert(item.Title, item.URL);
         }
+
+        //////////////////////////
+        // GETS BOOKMARK ITEMS //
+        ////////////////////////
         public static List<BookmarkItem> GetItems()
         {
             var adapter = new BookmarksTableAdapter();
@@ -32,6 +48,9 @@ namespace WebBrowser.Logic
             return results;
         }
 
+        /////////////////////////////
+        // DELETES BOOKMARK ITEMS //
+        ///////////////////////////
         public static void DeleteBook(string candidate)
         {
             var adapter = new BookmarksTableAdapter();
