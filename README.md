@@ -10,7 +10,7 @@ This program was built with the intention of learning software construction fund
 
 # Screenshots
 Here are some screenshots of the program and some of it's functionalities. 
-![Web Browser](https://imgur.com/8fqJGIR)
+![Web Browser](https://i.imgur.com/8fqJGIR.png)
 This is the main browser form. 
 ![Tool Dropdown](https://imgur.com/ql0XhqZ)
 When clicking on the "Tool" option, this dropdown with some options is shown.
